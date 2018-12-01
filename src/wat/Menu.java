@@ -35,7 +35,6 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton4 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
@@ -54,9 +53,8 @@ public class Menu extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jButton4.setBackground(java.awt.SystemColor.textHighlight);
-        jButton4.setFont(new java.awt.Font("Forte", 2, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jButton4.setFont(new java.awt.Font("BadaBoom BB", 0, 48)); // NOI18N
         jButton4.setText("Quit");
         jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -65,24 +63,10 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(600, 470, 130, 40);
+        jButton4.setBounds(550, 570, 220, 80);
 
-        jButton3.setBackground(java.awt.SystemColor.textHighlight);
-        jButton3.setFont(new java.awt.Font("Forte", 2, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Score Board");
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton3);
-        jButton3.setBounds(600, 380, 130, 40);
-
-        jButton2.setBackground(java.awt.SystemColor.textHighlight);
-        jButton2.setFont(new java.awt.Font("Forte", 2, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setFont(new java.awt.Font("BadaBoom BB", 0, 48)); // NOI18N
         jButton2.setText("Options");
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -91,11 +75,10 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(600, 300, 130, 40);
+        jButton2.setBounds(550, 470, 220, 80);
 
-        jButton1.setBackground(java.awt.SystemColor.textHighlight);
-        jButton1.setFont(new java.awt.Font("Forte", 2, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("BadaBoom BB", 0, 48)); // NOI18N
         jButton1.setText("Start");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -104,7 +87,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(600, 210, 130, 40);
+        jButton1.setBounds(550, 370, 220, 80);
 
         jLabel7.setFont(new java.awt.Font("Lithos Pro Regular", 1, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 102, 255));
@@ -148,17 +131,6 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ScoreBoard().setVisible(true);
-            }
-        });
-        this.setVisible(false);
-        
-    }//GEN-LAST:event_jButton3ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
@@ -195,7 +167,6 @@ Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(winClosingEvent);
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

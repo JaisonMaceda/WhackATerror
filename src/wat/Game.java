@@ -238,7 +238,7 @@ public class Game extends JFrame{
         JLabel lblTitle = new JLabel("Whack A Terror");
         lblTitle.setForeground(new Color(153, 204, 0));
         lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
-        lblTitle.setFont(new Font("Ravie", Font.BOLD, 30));
+        lblTitle.setFont(new Font("Arial", Font.BOLD, 30));
         lblTitle.setBounds(0, 30, 400, 30);
         contentPane.add(lblTitle);
 
