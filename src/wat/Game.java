@@ -67,17 +67,16 @@ public class Game extends JFrame{
     private Timer timer;
     
     private void saveHighscore(){
-    BufferedWriter bw = null;
-    try {
-        bw = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "/highscore.txt", false)); //append - set to false
-        bw.write("" + highscore);
-        bw.flush();
-        bw.close();
-    } catch (IOException e) {
-        JOptionPane.showMessageDialog(this, e.getMessage(), "Error while saving highscore", JOptionPane.ERROR_MESSAGE);
-    }
-}
-    
+        BufferedWriter bw = null;
+        try {
+            bw = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "/highscore.txt", false)); //append - set to false
+            bw.write("" + highscore);
+            bw.flush();
+            bw.close();
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, e.getMessage(), "Error while saving highscore", JOptionPane.ERROR_MESSAGE);
+        }
+    }   
     private void loadHighscore(){
     BufferedReader br = null;
         String line = "";
@@ -94,9 +93,6 @@ public class Game extends JFrame{
             lblHighscore.setText("Highscore: " + highscore);
         }
     }
-
-
-
     private void gameOver(){
         btnBack.setEnabled(true);
         if(score > highscore){
@@ -121,24 +117,22 @@ public class Game extends JFrame{
         
         //if val is 1 = terror
         //if val is 0 = empty hole
-        
-        
+       
         if(val==1){ 
-            
+            GunShell(); 
+            GunReload(); 
             score+=10;
             timeLeft++;
             lblBonus.setText("+1");
         }
         else{ 
+            GunShell(); 
+            GunReload();
             score-=10;
-            lblBonus.setText("0");
-            
-        }
-        
+            lblBonus.setText("0");        
+        }      
         lblScore.setText("Score: " + score); //update the score
-        clearBoard();
-
-        
+        clearBoard();  
     }
 
     private void initEvents(){
@@ -149,8 +143,6 @@ public class Game extends JFrame{
                     JLabel lbl = (JLabel)e.getSource();
                     int id = Integer.parseInt(lbl.getName());
                     pressedButton(id);
-                    
-                    
                 }
             });
         }
@@ -395,19 +387,43 @@ public class Game extends JFrame{
         return new ImageIcon(scaledImage);
         
     }
-    
-   public static void GunShot() {
-    InputStream in;
-    try {
-        in = new FileInputStream(new File("src/wat/gunshot.wav"));
-        AudioStream audios = new AudioStream(in);
-        AudioPlayer.player.start(audios);
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(null, e);
+    public static void GunShell() {
+        InputStream in;
+        try {
+            in = new FileInputStream(new File("src/wat/gunShell.wav"));
+            AudioStream audios = new AudioStream(in);
+            AudioPlayer.player.start(audios);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+
+        }
 
     }
+    public static void GunReload() {
+        InputStream in;
+        try {
+            in = new FileInputStream(new File("src/wat/gunReload.wav"));
+            AudioStream audios = new AudioStream(in);
+            AudioPlayer.player.start(audios);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
 
-}
+        }
+
+    }
+    
+    public static void GunShot() {
+        InputStream in;
+        try {
+            in = new FileInputStream(new File("src/wat/gunshot.wav"));
+            AudioStream audios = new AudioStream(in);
+            AudioPlayer.player.start(audios);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+
+        }
+
+    }
     public static void BgMusic() {
         
     InputStream in;
