@@ -43,9 +43,8 @@ public class Option extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jButton3.setBackground(java.awt.SystemColor.textHighlight);
-        jButton3.setFont(new java.awt.Font("Forte", 2, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setFont(new java.awt.Font("BadaBoom BB", 0, 48)); // NOI18N
         jButton3.setText("About");
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -54,11 +53,10 @@ public class Option extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(620, 390, 130, 40);
+        jButton3.setBounds(560, 430, 290, 90);
 
-        jButton2.setBackground(java.awt.SystemColor.textHighlight);
-        jButton2.setFont(new java.awt.Font("Forte", 2, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setFont(new java.awt.Font("BadaBoom BB", 0, 48)); // NOI18N
         jButton2.setText("How to Play");
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -67,11 +65,10 @@ public class Option extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(620, 290, 130, 40);
+        jButton2.setBounds(560, 330, 290, 80);
 
-        jButton1.setBackground(java.awt.SystemColor.textHighlight);
-        jButton1.setFont(new java.awt.Font("Forte", 2, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("BadaBoom BB", 0, 24)); // NOI18N
         jButton1.setText("Back");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -80,7 +77,7 @@ public class Option extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(40, 30, 90, 30);
+        jButton1.setBounds(40, 60, 100, 50);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Options/Picture1.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -88,7 +85,7 @@ public class Option extends javax.swing.JFrame {
         jLabel1.setMinimumSize(new java.awt.Dimension(1370, 1000));
         jLabel1.setPreferredSize(new java.awt.Dimension(1370, 1000));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1370, 1000);
+        jLabel1.setBounds(0, 10, 1370, 990);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
